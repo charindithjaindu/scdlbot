@@ -32,7 +32,7 @@ from scdlbot.utils import *
 logger = logging.getLogger(__name__)
 
 REQUEST_TIME = Summary('request_processing_seconds', 'Time spent processing request')
-
+musicgrop='@Music24x7SL'
 
 class ScdlBot:
 
@@ -700,7 +700,7 @@ class ScdlBot:
                             # else:
                             #     url = shorten_url(url)
                             caption = "@{} _got it from_ [{}]({}){}".format(self.bot_username.replace("_", "\_"),
-                                                                            source, url, addition.replace("_", "\_"))
+                                                                            musicgrop, url, addition.replace("_", "\_"))
                             # logger.info(caption)
                         sent_audio_ids = self.send_audio_file_parts(bot, chat_id, file_parts,
                                                                     reply_to_message_id if flood == "yes" else None,
